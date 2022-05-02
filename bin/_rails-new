@@ -13,14 +13,21 @@ rm -rf "$PROJECT_FOLDER"
 gem install rails -v $VERSION --no-document
 
 rails _"$VERSION"_ new rename_me \
+  --api \
   --skip-action-mailer \
   --skip-action-mailbox \
   --skip-action-text \
   --skip-active-record \
+  --skip-active-job \
+  --skip-asset-pipeline \
   --skip-active-storage \
   --skip-puma \
   --skip-action-cable \
   --skip-bootsnap \
-  --skip-hotwire
+  --skip-hotwire \
+  --skip-javascript \
+  --skip-jbuilder \
+  --skip-test \
+  --skip-bootsnap
 
 mv "rename_me" "$PROJECT_FOLDER"
